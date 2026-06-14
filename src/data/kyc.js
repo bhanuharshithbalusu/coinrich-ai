@@ -1,0 +1,71 @@
+export const kyc = {
+  status: 'in_progress',
+  steps: [
+    { id: 1, name: 'Personal Info', status: 'completed' },
+    { id: 2, name: 'Identity Document', status: 'completed' },
+    { id: 3, name: 'Address Verification', status: 'in_progress' },
+    { id: 4, name: 'Selfie Verification', status: 'pending' },
+    { id: 5, name: 'Review & Approval', status: 'pending' },
+  ],
+  identityDocument: { type: 'Passport', number: 'P12345678', expiryDate: '2032-05-12' },
+  addressVerification: {
+    options: ['bank_statement', 'utility_bill', 'tax_document'],
+    selected: 'bank_statement',
+  },
+  timeline: [
+    { timestamp: '2026-05-20T10:21:00Z', label: 'Personal information submitted', done: true },
+    { timestamp: '2026-05-20T10:24:00Z', label: 'Identity document approved', done: true },
+    { timestamp: '2026-05-20T10:28:00Z', label: 'Address verification submitted', done: false },
+  ],
+  personalInfo: {
+    fullName: 'John Anderson',
+    dateOfBirth: '1990-04-15',
+    nationality: 'United States',
+    email: 'john.anderson@email.com',
+    phone: '+1 (555) 012-3456',
+  },
+  progressSteps: [
+    { id: 1, label: 'Personal Info', sublabel: 'Completed', status: 'completed' },
+    { id: 2, label: 'Identity Doc', sublabel: 'Completed', status: 'completed' },
+    { id: 3, label: 'Address', sublabel: 'In Progress', status: 'in_progress' },
+    { id: 4, label: 'Selfie', sublabel: 'Pending', status: 'pending' },
+    { id: 5, label: 'Review', sublabel: 'Pending', status: 'pending' },
+  ],
+  verificationStatus: [
+    { label: 'Personal Information', status: 'completed' },
+    { label: 'Identity Document', status: 'completed' },
+    { label: 'Address Verification', status: 'in_progress' },
+    { label: 'Selfie Verification', status: 'pending' },
+    { label: 'Review & Approval', status: 'pending' },
+  ],
+  benefits: [
+    'Higher trading limits ($50,000/day)',
+    'Access to advanced trading features',
+    'Priority customer support',
+    'Reduced transaction fees',
+    'Access to exclusive investment products',
+  ],
+  addressUploadOptions: [
+    {
+      id: 'bank_statement',
+      icon: 'bank',
+      title: 'Bank Statement',
+      description: 'Recent bank statement (last 3 months)',
+      status: 'selected',
+    },
+    {
+      id: 'utility_bill',
+      icon: 'zap',
+      title: 'Utility Bill',
+      description: 'Electricity, water, or gas bill',
+      status: 'upload',
+    },
+    {
+      id: 'tax_document',
+      icon: 'file-text',
+      title: 'Tax Document',
+      description: 'Recent tax return or assessment',
+      status: 'upload',
+    },
+  ],
+};
